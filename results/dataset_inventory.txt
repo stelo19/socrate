@@ -1,0 +1,7 @@
+revision: 3bb0c104d65e29facffca7ba864ef10fa22d0e78
+transcripts train 462 ['transcript_id', 'source', 'batch', 'has_video', 'turns', 'session', 'eedi_content_link', 'enrichments']
+annotations train 1584 ['transcript_id', 'source', 'batch', 'annotation_type', 'interface_version', 'turn_annotations', 'overall_annotations', 'annotator_id']
+ground_truth train 207 ['conversation_id', 'num_turns', 'key_moments']
+moments train 520 ['id', 'context', 'dimension', 'student', 'rubric', 'provenance']
+benchmark_520 train 7280 ['cell', 'tutor_model', 'prompt_mode', 'source_round', 'source_dir', 'run_config', 'scenario_id', 'conv_id', 'cut_turn', 'detection', 'exchange', 'annotation', 'student_trait']
+action_taxonomy train 51246 ['source', 'tutor_model', 'prompt_mode', 'moment_id', 'key_moment_index', 'transcript_id', 'turn_start', 'turn_end', 'statement_index', 'statement', 'situation_label', 'action_label', 'result_label', 'stance_prefixed', 'category', 'category_name', 'orientation', 'excluded_reason']
