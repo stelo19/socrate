@@ -1,0 +1,59 @@
+{
+  "tutor": "qwen2.5-3b-ollama",
+  "arm": "qwen2.5-3b-ollama",
+  "model": null,
+  "condition": null,
+  "mode": "scaffolding_rigor",
+  "dataset": {
+    "id": "allenai/tutormoments-preview",
+    "revision": "3bb0c104d65e29facffca7ba864ef10fa22d0e78",
+    "data_path": "subsets/pilot_10",
+    "config": "moments",
+    "record_count": 10,
+    "content_hash": "e75acc0ed2935e5b82ded9028604800d77b13065e7f9e8cbe8ef061a44ad4332"
+  },
+  "sample": null,
+  "max_turns": 5,
+  "trials": 1,
+  "replay_concurrency": 3,
+  "max_student_concurrency": 4,
+  "student": {
+    "model": "glm-student",
+    "mode": "oracle",
+    "thinking": null
+  },
+  "scorer": {
+    "model": "glm-5.3-flash",
+    "thinking": {
+      "reasoning": "none"
+    }
+  },
+  "resolved_tutors": {
+    "llama3.2-3b-ollama": null,
+    "qwen2.5-3b-ollama": null
+  },
+  "config_source": "configs/socrate_config.yaml",
+  "reproducibility": {
+    "tutormoments_version": "0.1.0",
+    "git_commit": "e0924374ebb3d65fb915b45ef24cd789587ea8c0",
+    "config_hash": "8beb9947c1e694cf9b61f6d0900c624d92956fd9b23080a79b4ab63c5b7da780",
+    "prompt_hashes": {
+      "prompts/scorer/annotate/scaffolding.md": "2962eb3ace86e6a0371aafdf805163d77505c4eb2c2c695deaf0b3be87fb9ac1",
+      "prompts/scorer/decompose/decompose_action.md": "6f4b063a604a6d131e542011c96b8a29adf39331007109590f4bd6302db3cc88",
+      "prompts/scorer/decompose/decompose_overscaffold.md": "bad58e224941e81ab4a0441e6455ceb8307640b94805c9f07630460739278385",
+      "prompts/scorer/decompose/decompose_result.md": "e082dc76de77f82aa2043d68ad20ff6703cf60153f40a76f300fc784936935ca",
+      "prompts/scorer/structure/classify_action.md": "53b8312176f3293031d7121bb88688b244944258c5f3bf0b33c9b67d1ddbe926",
+      "prompts/scorer/structure/classify_student_result.md": "b5e46056d5b20f4f1834cfc9b5a3e2848a1660b4a4ee8f96b6adb37b77fdb24d",
+      "prompts/smoke/cache_head.md": "9b6054fa4166e5f632157b0858caf10ece0f5ca4a08c9a9fd837166f0fad2bf9",
+      "prompts/smoke/ping.md": "bcf1cdb812f65b9770be903920bd39d43785ec6de0e8931f7ca91414bc387d79",
+      "prompts/smoke/ping_json.md": "1bac38a8f87c4ddb083fa6e4588ecbcd2bc00d4f1e1cd0ae166b9f7e92d1824a",
+      "prompts/student/oracle.txt": "e721d758cea9d590422bb4ea231df3f4c8ea804a24deacb8f877559eedf3f528",
+      "prompts/taxonomy/classify_actions.md": "44222e3bc82e79e4e5e851cb70248102b0f748242022c0513cd193da5687f6b0",
+      "prompts/tutor/oracle.txt": "3323d7daba9a4ebacfe60fda5c054164cd2ecd74931ad66d2d194d8d4c4f1dfe",
+      "prompts/tutor/plain.txt": "3834a05f65488fa652aa80b1ff04ce0c02d806e046be3df9c1411548377b67bf",
+      "prompts/tutor/scaffolding_rigor.txt": "db8be72a82126753be213c8cc25d57c696e495675a709c9ca527d84428d95e49"
+    },
+    "dataset_manifest": null
+  },
+  "created_at": "2026-11-19T19:44:01"
+}

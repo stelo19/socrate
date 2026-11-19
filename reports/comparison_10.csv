@@ -3,3 +3,5 @@ glm_plain_pilot_10_20261119,glm,plain,glm-student,glm-5.3-flash,10,9,0.8,0.4,1.0
 llama3.2-3b-ollama_plain_pilot_10_20261119,llama3.2-3b-ollama,plain,glm-student,glm-5.3-flash,10,9,0.4,0.0,0.8333333333333334,0.4,0.0,1.0,0.4,0.09999999999999998,0.7777777777777778,89639
 qwen2.5-3b-ollama_plain_pilot_10_20261119,qwen2.5-3b-ollama,plain,glm-student,glm-5.3-flash,10,9,0.4,0.0,0.8333333333333334,0.4,0.0,0.8571428571428571,0.5,0.18181818181818177,0.8888888888888888,76147
 glm_scaffolding_rigor_pilot_10_20261119,glm,scaffolding_rigor,glm-student,glm-5.3-flash,10,9,0.2,0.0,0.6666666666666666,0.6,0.0,1.0,0.5,0.2222222222222222,0.7777777777777778,82462
+llama3.2-3b-ollama_scaffolding_rigor_pilot_10_20261119,llama3.2-3b-ollama,scaffolding_rigor,glm-student,glm-5.3-flash,10,9,0.2,0.0,0.6666666666666666,0.4,0.0,1.0,0.30000000000000004,0.0,0.6666666666666667,96201
+qwen2.5-3b-ollama_scaffolding_rigor_pilot_10_20261119,qwen2.5-3b-ollama,scaffolding_rigor,glm-student,glm-5.3-flash,10,9,0.6,0.0,1.0,0.2,0.0,0.6666666666666666,0.5,0.19999999999999996,0.7777777777777778,98618
