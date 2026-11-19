@@ -1,0 +1,3 @@
+run,tutor,prompt,student,judge,n,n_sessions,S,S_lo,S_hi,R,R_lo,R_hi,O,O_lo,O_hi,judge_tokens
+glm_plain_pilot_10_20261119,glm,plain,glm-student,glm-5.3-flash,10,9,0.8,0.4,1.0,0.6,0.0,1.0,0.7,0.33333333333333337,1.0,85724
+glm_scaffolding_rigor_pilot_10_20261119,glm,scaffolding_rigor,glm-student,glm-5.3-flash,10,9,0.2,0.0,0.6666666666666666,0.6,0.0,1.0,0.5,0.2222222222222222,0.7777777777777778,82462

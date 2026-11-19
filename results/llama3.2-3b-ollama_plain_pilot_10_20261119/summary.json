@@ -1,0 +1,222 @@
+{
+  "n_scenarios": 10,
+  "overscaffold": {
+    "n_yes": 6,
+    "n_total": 10,
+    "rate": 0.6,
+    "available": true
+  },
+  "scaffold_calibrated": {
+    "n_clean_yes": 2,
+    "n_overscaffold": 3,
+    "n_total": 5,
+    "score": 0.4
+  },
+  "rigor_calibrated": {
+    "n_clean_yes": 2,
+    "n_total": 5,
+    "score": 0.4
+  },
+  "run_counts": {
+    "attempted": 10,
+    "succeeded": 10,
+    "failed": 0,
+    "resumed": 0
+  },
+  "tutor_model": "llama3.2-3b-ollama",
+  "model": null,
+  "condition": null,
+  "mode": "plain",
+  "latency": {
+    "source": "run",
+    "concurrency": 3,
+    "tutor": {
+      "n": 30,
+      "total_seconds": 1013.967,
+      "mean_seconds": 33.799,
+      "p5_seconds": 4.879,
+      "p50_seconds": 26.149,
+      "p95_seconds": 84.403
+    },
+    "student": {
+      "n": 20,
+      "total_seconds": 164.167,
+      "mean_seconds": 8.208,
+      "p5_seconds": 2.048,
+      "p50_seconds": 6.21,
+      "p95_seconds": 15.959
+    },
+    "tutor_streamed": {
+      "n_samples": 0,
+      "cache_read_p50_on_hits": null,
+      "n_no_visible_output": 0,
+      "no_visible_output_rate": null,
+      "cache_hit_rate": null,
+      "cache_state_known": 0,
+      "ttft": {
+        "hit": null,
+        "miss": null,
+        "all": null
+      },
+      "ttlt": {
+        "hit": null,
+        "miss": null,
+        "all": null
+      },
+      "ttfc": {
+        "hit": null,
+        "miss": null,
+        "all": null
+      },
+      "output_tps_mean": null
+    },
+    "student_streamed": {
+      "n_samples": 0,
+      "cache_read_p50_on_hits": null,
+      "n_no_visible_output": 0,
+      "no_visible_output_rate": null,
+      "cache_hit_rate": null,
+      "cache_state_known": 0,
+      "ttft": {
+        "hit": null,
+        "miss": null,
+        "all": null
+      },
+      "ttlt": {
+        "hit": null,
+        "miss": null,
+        "all": null
+      },
+      "ttfc": {
+        "hit": null,
+        "miss": null,
+        "all": null
+      },
+      "output_tps_mean": null
+    }
+  },
+  "tokens": {
+    "tutor": {
+      "input_tokens": 67116,
+      "output_tokens": 4500,
+      "total_tokens": 71616,
+      "input_uncached": 67116,
+      "cache_read": 0,
+      "cache_write": 0,
+      "output": 4500,
+      "reasoning": 0,
+      "total": 71616,
+      "provider": "openai-compatible",
+      "model": "llama3.2:3b",
+      "endpoint": "sync"
+    },
+    "student": {
+      "input_tokens": 299436,
+      "output_tokens": 655,
+      "total_tokens": 300091,
+      "input_uncached": 299436,
+      "cache_read": 0,
+      "cache_write": 0,
+      "output": 655,
+      "reasoning": 0,
+      "total": 300091,
+      "provider": "openai-compatible",
+      "model": "glm-5.3-flash",
+      "endpoint": "sync"
+    },
+    "scorer": {
+      "input_tokens": 42553,
+      "output_tokens": 47086,
+      "total_tokens": 89639,
+      "input_uncached": 42553,
+      "cache_read": 0,
+      "cache_write": 0,
+      "output": 47086,
+      "reasoning": 0,
+      "total": 89639,
+      "provider": "openai-compatible",
+      "model": "glm-5.3-flash",
+      "endpoint": "sync"
+    },
+    "total": {
+      "input_tokens": 411516,
+      "output_tokens": 53360,
+      "total_tokens": 464876,
+      "input_uncached": 411516,
+      "cache_read": 0,
+      "cache_write": 0,
+      "output": 53360,
+      "reasoning": 0,
+      "total": 464876,
+      "provider": "openai-compatible",
+      "model": "glm-5.3-flash+llama3.2:3b",
+      "endpoint": "sync"
+    },
+    "taxonomy": {
+      "input_tokens": 2411,
+      "output_tokens": 1119,
+      "total_tokens": 3530,
+      "input_uncached": 2411,
+      "cache_read": 0,
+      "cache_write": 0,
+      "output": 1119,
+      "reasoning": 0,
+      "total": 3530,
+      "provider": "openai-compatible",
+      "model": "glm-5.3-flash",
+      "endpoint": "sync"
+    }
+  },
+  "taxonomy": {
+    "scheme_version": "lm_extended_v1",
+    "counts": {
+      "A": 3,
+      "B": 1,
+      "C": 11,
+      "D": 2,
+      "E": 2,
+      "F": 10,
+      "G": 2,
+      "I": 3,
+      "J": 2,
+      "K": 6,
+      "L": 1,
+      "M": 3
+    },
+    "orientation": {
+      "scaffolding": 29,
+      "rigor": 7,
+      "neutral": 10
+    },
+    "kl": {
+      "s_r": 0.028277825652519857,
+      "r_s": 0.029673337578083457,
+      "n_scaffolding": 5,
+      "n_rigor": 3
+    },
+    "n_facets": 46,
+    "excluded": 12,
+    "usage": {
+      "input_tokens": 2411,
+      "output_tokens": 1119,
+      "total_tokens": 3530,
+      "input_uncached": 2411,
+      "cache_read": 0,
+      "cache_write": 0,
+      "output": 1119,
+      "reasoning": 0,
+      "total": 3530,
+      "provider": "openai-compatible",
+      "model": "glm-5.3-flash",
+      "endpoint": "sync"
+    }
+  },
+  "cost": {
+    "tutor_list_cost_usd": null,
+    "tutor_cost_per_conversation_usd": null,
+    "n_conversations": 10,
+    "run_billed_cost_estimate_usd": null,
+    "pricing_version": "2026-10-14",
+    "rates": {}
+  }
+}

@@ -1,9 +1,28 @@
+# secrets
 .env
+
+# environments and caches
 .venv/
 venv/
-tutormoments/
-keyless/
-results/*/transcripts/
 __pycache__/
 *.pyc
 *Zone.Identifier
+
+# old local experiments
+keyless/
+results_old/
+
+# benchmark runs: keep only summary.json and config.json of each run
+# (transcripts and judge texts come from sessions with minors: not published)
+results/*/*
+!results/*/summary.json
+!results/*/config.json
+
+# raw judge answers, local dataset copies, export folder for Hugging Face
+logs/
+judge_raw*.jsonl
+subsets/*/moments.jsonl
+export/
+
+# run logs
+*.log

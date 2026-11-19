@@ -31,8 +31,13 @@ if len(sys.argv) > 1:
         {"role": "system", "content": "You are a patient math tutor for a 5th grader."},
         {"role": "user", "content": "I think 3/4 + 1/4 = 4/8. Is that right?"},
     ]
-    resp = client.chat.completions.create(model=model, messages=messages, max_tokens=200)
+    resp = client.chat.completions.create(model=model, messages=messages, max_tokens=4000)
 
+    choice = resp.choices[0]
+    # reasoning models (e.g. GLM) return their "thinking" in a separate field
+    reasoning = getattr(choice.message, "reasoning_content", None) or ""
     print("\nanswer from", model)
-    print(resp.choices[0].message.content)
-    print("\ntokens used:", resp.usage.total_tokens)
+    print(choice.message.content)
+    print("\nfinish reason:", choice.finish_reason)
+    print("reasoning characters:", len(reasoning))
+    print("tokens used:", resp.usage.total_tokens)

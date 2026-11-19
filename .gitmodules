@@ -1,0 +1,4 @@
+[submodule "tutormoments"]
+	path = tutormoments
+	url = https://github.com/allenai/tutormoments.git
+	ignore = untracked

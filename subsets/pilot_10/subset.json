@@ -1,0 +1,24 @@
+{
+  "dataset": "allenai/tutormoments-preview",
+  "revision": "3bb0c104d65e29facffca7ba864ef10fa22d0e78",
+  "seed": 0,
+  "n": 10,
+  "by_dimension": {
+    "scaffolding": 5,
+    "rigor": 5
+  },
+  "n_sessions": 9,
+  "content_hash": "e75acc0ed2935e5b82ded9028604800d77b13065e7f9e8cbe8ef061a44ad4332",
+  "ids": [
+    "balanced_520:25acdad9-1263-5d75-bbc7-0cb316e7f15e_010c8c6e-a380-5740-aa53-a29a61adf7af_266eabd2-a76b-52d8-8bcb-8f538b0a3a6a__hum_270_283",
+    "balanced_520:6c606ff3-8b73-5513-b24c-9acdaa37edea_55ce1e17-65af-5aa5-b086-4308443a0dc8_95c0321a-0dbb-511a-bf6f-189eb610dfc1__hum_53_76",
+    "balanced_520:85ff7262-ea02-569c-aedd-234aa3fd23a8_19b9cac3-0ff9-5818-806c-04168f248833_0519c537-5db0-5f59-ac77-75a1da3a658e__hum_158_203",
+    "balanced_520:ab026e75-8a2b-51e1-90ff-61c3819c30a4_6aaa8c0e-2d55-5aed-9a67-542f0cea7390_7505b969-8cf1-5bde-aaa7-3cf780ac5396__hum_100_106",
+    "balanced_520:bc5eb3f1-d32c-5af1-a9e2-f0fdfc44d29f_c0bc395f-a533-5229-a654-2ce10abfc90e_95b66712-0f68-58ff-86a5-d9ee7f1b4946__hum_147_159",
+    "balanced_520:e1c0ee42-4db2-558d-adf0-557bcb20d715_92058906-7c85-5f08-aba9-adbece587c38_4b416254-d002-5c8f-ae73-a3dc0ab29dbb__hum_170_180",
+    "balanced_520:e42eef82-14f6-5362-87e0-bd364eb28f79_371f40a8-9d3a-5c25-b8e2-12ec0c9f923e_3c20e347-38d3-5547-981a-a2aa95a969c6__hum_47_50",
+    "balanced_520:ea402aac-7644-5bcb-8ef3-168648dc30ef_57b8d8b0-e8dd-56b6-8c68-fded39976370_de7d0d88-8da8-5564-ac1d-ca88daaa9b35__hum_166_184",
+    "balanced_520:fbc0a1bc-dad5-5081-9c46-f89b58c43ba0_afbeb032-32c1-58b7-80ad-72eec1254828_821bb579-2ee2-5167-890b-af490ea40d80__hum_214_229",
+    "balanced_520:fbc0a1bc-dad5-5081-9c46-f89b58c43ba0_afbeb032-32c1-58b7-80ad-72eec1254828_821bb579-2ee2-5167-890b-af490ea40d80__hum_52_58"
+  ]
+}

@@ -1,0 +1,25 @@
+# Benchmark config for our runs (passed with --config).
+# Same structure as tutormoments/default_config.yaml; what changes:
+#   - student: "glm-student" (configs/models.yaml: GLM with low reasoning) instead of
+#     claude-opus-4-6 with thinking disabled, same for every tutor
+#   - scorer and taxonomy: glm-5.3-flash on the EURECOM gateway instead of Claude Opus
+# Tutors are not listed here: they come from configs/models.yaml (--tutors glm qwen3-8b ...).
+
+dataset:
+  id: allenai/tutormoments-preview
+  revision: 3bb0c104d65e29facffca7ba864ef10fa22d0e78   # pinned, same as our replication
+  config: moments
+
+providers:
+  openai: { env: OPENAI_API_KEY }   # unused, kept for the config check
+
+benchmark_models: {}
+
+student:  { model: glm-student, mode: oracle }
+scorer:   { model: glm-5.3-flash, reasoning: none }
+taxonomy: { model: glm-5.3-flash, reasoning: none, batch_size: 50 }
+
+defaults:  { trials: 1, max_turns: 5 }
+retry:     { max_retries: 5, base_delay: 5 }
+batch:     { timeout: 86400 }
+execution: { replay_concurrency: 4, max_student_concurrency: 4 }

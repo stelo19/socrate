@@ -1,0 +1,5 @@
+run,tutor,prompt,student,judge,n,n_sessions,S,S_lo,S_hi,R,R_lo,R_hi,O,O_lo,O_hi,judge_tokens
+glm_plain_pilot_10_20261119,glm,plain,glm-student,glm-5.3-flash,4,4,1.0,1.0,1.0,0.5,0.0,1.0,0.75,0.25,1.0,33652
+llama3.2-3b-ollama_plain_pilot_4_20261119,llama3.2-3b-ollama,plain,glm-student,glm-5.3-flash,4,4,0.0,0.0,0.0,0.5,0.0,1.0,0.25,0.0,0.75,33053
+qwen2.5-3b-ollama_plain_pilot_4_20261119,qwen2.5-3b-ollama,plain,glm-student,glm-5.3-flash,4,4,0.5,0.0,1.0,0.0,0.0,0.0,0.5,0.0,1.0,35076
+glm_scaffolding_rigor_pilot_10_20261119,glm,scaffolding_rigor,glm-student,glm-5.3-flash,4,4,0.0,0.0,0.0,0.5,0.0,1.0,0.5,0.0,1.0,33044

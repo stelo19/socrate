@@ -1,0 +1,12 @@
+# Our scripts' dependencies. The Ai2 benchmark itself is NOT installed from here:
+# it is the git submodule tutormoments/ (pinned at commit c6e26d7), installed with
+#   pip install -e "./tutormoments[dev,analysis]"
+openai
+pyyaml
+python-dotenv
+huggingface_hub
+datasets
+matplotlib
+# optional, to run Qwen/Llama on a GPU:
+#   vllm                            (OpenAI-compatible server, recommended)
+#   torch transformers accelerate   (in-process backend, "*-hf" models)

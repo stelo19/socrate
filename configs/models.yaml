@@ -1,0 +1,83 @@
+# Models available as TUTOR or STUDENT in our runs.
+#
+# Each entry says how to reach the model:
+#   endpoint: one of the servers below (OpenAI-compatible API), or
+#   backend: transformers  -> the model is loaded inside the script (no server)
+#
+# ${VAR} is read from the environment / .env; ${VAR:-default} uses a default.
+# The JUDGE model is not here: it is the "scorer" in configs/socrate_config.yaml
+# (glm-5.3-flash on the EURECOM gateway), the same for every run. The "judge"
+# block at the end only sets how its requests are sent.
+
+endpoints:
+  gateway:                       # EURECOM LLM gateway (D2KLab)
+    base_url: ${EURECOM_BASE_URL:-https://llm.tools.eurecom.fr/v1}
+    api_key: ${EURECOM_API_KEY}
+  vllm_qwen:                     # vLLM server for Qwen   (see README: "vllm serve ...")
+    base_url: ${VLLM_QWEN_URL:-http://localhost:8000/v1}
+    api_key: EMPTY
+  vllm_llama:                    # vLLM server for Llama  (second port)
+    base_url: ${VLLM_LLAMA_URL:-http://localhost:8001/v1}
+    api_key: EMPTY
+  ollama:                        # local Ollama (quick tests on a laptop)
+    base_url: ${OLLAMA_BASE_URL:-http://localhost:11434/v1}
+    api_key: ollama
+
+models:
+  # --- main comparison --------------------------------------------------------
+  glm:                           # tutor (GLM with its default reasoning)
+    endpoint: gateway
+    model: glm-5.3-flash
+    max_tokens: 8192             # GLM reasons before answering: leave room
+    reasoning: true              # always send the full max_tokens (hidden reasoning)
+  glm-student:                   # the simulated student: GLM with little reasoning
+    endpoint: gateway            # (the paper's student runs with thinking disabled)
+    model: glm-5.3-flash
+    max_tokens: 8192
+    reasoning: true
+    extra_body: {reasoning_effort: low}
+  qwen3-8b:
+    endpoint: vllm_qwen
+    model: Qwen/Qwen3-8B
+    max_tokens: 2048
+    extra_body: {chat_template_kwargs: {enable_thinking: false}}   # answer directly
+  llama-3.1-8b:
+    endpoint: vllm_llama
+    model: meta-llama/Llama-3.1-8B-Instruct                         # gated: accept the licence on HF
+    max_tokens: 2048
+
+  # --- same models without a server (slower; needs a GPU for 8B) --------------
+  qwen3-8b-hf:
+    backend: transformers
+    model: Qwen/Qwen3-8B
+    max_tokens: 2048
+    enable_thinking: false
+  llama-3.1-8b-hf:
+    backend: transformers
+    model: meta-llama/Llama-3.1-8B-Instruct
+    max_tokens: 2048
+
+  # --- small models for testing the pipeline on a laptop ----------------------
+  qwen-tiny-hf:
+    backend: transformers
+    model: Qwen/Qwen2.5-0.5B-Instruct
+    max_tokens: 512
+  llama3.2-3b-ollama:
+    endpoint: ollama
+    model: llama3.2:3b
+    max_tokens: 1024
+  qwen2.5-3b-ollama:             # Qwen/Qwen2.5-3B-Instruct (Apache-2.0) via Ollama
+    endpoint: ollama
+    model: qwen2.5:3b
+    max_tokens: 1024
+
+# --- request options for the judge and the action taxonomy (gateway) -----------
+# As in the paper's config: the judge keeps its reasoning (paper: adaptive thinking),
+# the taxonomy runs with reasoning off (paper: thinking disabled). On the EURECOM
+# gateway reasoning_effort "low" is what turns GLM's reasoning down
+# (checked with scripts/test_thinking.py; enable_thinking=false does NOT work there).
+judge:
+  max_tokens: 16384
+  reasoning: true                # always send the full max_tokens
+  extra_body: {}
+  taxonomy_extra_body: {reasoning_effort: low}
